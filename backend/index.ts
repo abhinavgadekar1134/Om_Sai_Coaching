@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Update CORS to allow requests from any origin
+// Update CORS to allow requests from any origind
 app.use(cors());
 app.use(express.json());
 
