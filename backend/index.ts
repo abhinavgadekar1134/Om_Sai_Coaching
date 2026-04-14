@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Update CORS to allow requests from any origin
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
