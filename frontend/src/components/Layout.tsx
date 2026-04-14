@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, LogOut, User, BookOpen, Info, Phone, Home as HomeIcon, LayoutDashboard, MapPin, Mail, MessageCircle, Instagram, Facebook, Book } from "lucide-react";
+import { Menu, X, LogOut, User, BookOpen, Info, Phone, Home as HomeIcon, LayoutDashboard, MapPin, Mail, MessageCircle, Instagram, Facebook, YouTube, Book } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { motion, AnimatePresence } from "motion/react";
 import om_sai from './om_sai.png'
@@ -181,6 +181,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               </a>
               <a href="https://www.instagram.com/om_sai_coaching/" className="w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-all">
                 <Instagram size={20} />
+              </a>
+              <a href="https://www.youtube.com/@om_saicoaching" className="w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white hover:border-red-600 transition-all">
+                <YouTube size={20} />
               </a>
               <a href="https://wa.me/9511757781" className="w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
                 <MessageCircle size={20} />
