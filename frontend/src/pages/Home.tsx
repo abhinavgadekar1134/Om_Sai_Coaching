@@ -7,7 +7,7 @@ import { API_BASE_URL } from "../config/api";
 import om_sai from "../components/om_sai.png";
 export default function Home() {
   const [stats] = useState([
-    { label: "Students Enrolled", value: "5000+", icon: <Users className="text-brand-blue" /> },
+    { label: "Students Enrolled", value: "2000+", icon: <Users className="text-brand-blue" /> },
     { label: "Success Rate", value: "98%", icon: <Award className="text-brand-green" /> },
     { label: "Expert Teachers", value: "10+", icon: <Users className="text-brand-red" /> },
     { label: "Years Experience", value: new Date().getFullYear() - 2014 + "+", icon: <Calendar className="text-brand-blue" /> },
@@ -92,7 +92,7 @@ export default function Home() {
       </a>
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50">
+      <section className="relative min-h-[90vh] md:h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070"
@@ -104,13 +104,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 bg-brand-red/10 border border-brand-red/20 rounded-full text-brand-red text-sm font-bold mb-4"
-          >
-            Admissions Open for 2024-25
-          </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -119,8 +113,8 @@ export default function Home() {
           >
             <div className="relative w-24 h-24 flex items-center justify-center">
               {/* <div className="absolute inset-0 rounded-full border-4 border-brand-red border-t-brand-green border-r-brand-green animate-spin-slow"></div> */}
-              <img src={om_sai} style={{ width: "200px" }} alt="" />
-              <Book className="text-brand-blue" size={48} />
+              <img src={om_sai} className="" style={{ width: "200px" }} alt="" />
+              {/* <Book className="text-brand-blue" size={48} /> */}
             </div>
           </motion.div>
 
@@ -180,20 +174,16 @@ export default function Home() {
             </a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="pt-8 flex items-center justify-center gap-2 text-slate-400 text-sm font-medium"
-          >
-            <Phone size={16} className="text-brand-green" />
-            For any query contact on call: <span className="text-slate-900 font-bold">+91 98765 43210</span>
-          </motion.div>
+ 
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="max-w-7xl mx-auto px-4">
+      <section className="max-w-7xl mx-auto px-4 space-y-8">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Our Impact at a Glance</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto">Key numbers that show why students trust Om Sai Coaching.</p>
+        </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <motion.div
