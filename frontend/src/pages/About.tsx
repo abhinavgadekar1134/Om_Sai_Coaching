@@ -4,7 +4,7 @@ import { Users, Award, Calendar, BookOpen, Target, Eye, Heart, Shield, Zap, Chec
 
 export default function About() {
   const stats = [
-    { label: "Students Enrolled", value: "5000+", icon: <Users size={24} /> },
+    { label: "Students Enrolled", value: "2000+", icon: <Users size={24} /> },
     { label: "Success Rate", value: "98%", icon: <Award size={24} /> },
     { label: "Expert Teachers", value: "10+", icon: <Users size={24} /> },
     { label: "Years Experience", value: new Date().getFullYear() - 2014 + "+", icon: <Calendar size={24} /> },

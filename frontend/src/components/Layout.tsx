@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, LogOut, User, BookOpen, Info, Phone, Home as HomeIcon, LayoutDashboard, MapPin, Mail, MessageCircle, Instagram, Facebook, Book } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { motion, AnimatePresence } from "motion/react";
@@ -152,6 +152,12 @@ export const Navbar = () => {
 };
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       <Navbar />
