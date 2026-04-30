@@ -15,9 +15,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const PrivateRoute = ({ children, roles }: { children: React.ReactNode; roles?: string[] }) => {
-  const { user, loading } = useAuth();
+  const { user, loadingg } = useAuth();
 
-  if (loading) return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-blue-500">Loading...</div>;
+  if (loadingg) return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-blue-500">Loading...</div>;
   if (!user) return <Navigate to="/login" />;
   if (roles && !roles.includes(user.role)) return <Navigate to="/" />;
 
